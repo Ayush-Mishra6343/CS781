@@ -1,0 +1,17 @@
+{
+  "submission_id": "1014073",
+  "phase": 5,
+  "phase_name": "Phase 5: Legal Statute Identification (LSI)",
+  "timestamp": "2026-10-28 14:15",
+  "portal_score": 0.3211,
+  "evaluation_metric": "Macro F1",
+  "status": "Superseded",
+  "approach": "Legal-BERT multi-label classifier with dynamic positive loss weighting",
+  "producing_notebook": "notebooks/phase_05_statute_identification/historical_experiments/V4_KAGGLE_HYBRID_LSI.ipynb",
+  "hyperparameters": {
+    "backbone": "legal-bert",
+    "pos_weight": "dynamic",
+    "lr": 3e-05,
+    "epochs": 5
+  }
+}

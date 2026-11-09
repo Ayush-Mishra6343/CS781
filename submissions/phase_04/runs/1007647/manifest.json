@@ -1,0 +1,18 @@
+{
+  "submission_id": "1007647",
+  "phase": 4,
+  "phase_name": "Phase 4: Court Judgment Prediction and Explanation (CJPE)",
+  "timestamp": "2026-10-25 16:50",
+  "portal_score": 0.5735,
+  "evaluation_metric": "Macro F1",
+  "status": "Superseded",
+  "approach": "Soft Prompt Tuning (20 virtual tokens) + LoRMA Adapter with Asymmetric Loss",
+  "producing_notebook": "notebooks/phase_04_judgment_prediction/historical_experiments/CS781_Phase4_CJPE_V2_LoRMA_Plus_Stage2.ipynb",
+  "hyperparameters": {
+    "virtual_tokens": 20,
+    "adapter": "LoRMA",
+    "rank": 8,
+    "loss": "Asymmetric",
+    "lr": 0.0003
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "backbone": "roberta-base",
+  "lr": 3e-05,
+  "batch_size": 16,
+  "epochs": 6,
+  "threshold": 0.42,
+  "boundary_calibrated": true,
+  "label_count": 14
+}

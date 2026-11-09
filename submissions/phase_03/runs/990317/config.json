@@ -1,0 +1,6 @@
+{
+  "backbone": "allenai/longformer-base-4096",
+  "max_len": 2048,
+  "gamma": 2.0,
+  "lr": 3e-05
+}

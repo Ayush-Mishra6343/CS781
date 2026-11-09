@@ -1,0 +1,6 @@
+{
+  "backbone": "allenai/led-base-16384",
+  "max_input_len": 4096,
+  "max_summary_len": 512,
+  "lr": 5e-05
+}

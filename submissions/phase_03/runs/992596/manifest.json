@@ -1,0 +1,20 @@
+{
+  "submission_id": "992596",
+  "phase": 3,
+  "phase_name": "Phase 3: Rhetorical Role (RR) Classification & PEFT Suite",
+  "timestamp": "2026-10-16 14:10",
+  "portal_score": 0.4058,
+  "evaluation_metric": "Macro F1",
+  "status": "Superseded",
+  "approach": "Weighted ensemble of LoRA and LoRMA without BitFit",
+  "producing_notebook": "notebooks/phase_03_rhetorical_roles/CS781_Phase3_PEFT_LoRA_LoRMA_BitFit.ipynb",
+  "hyperparameters": {
+    "backbone": "legal-roberta-base",
+    "lora_r": 8,
+    "lorma_r": 8,
+    "weights": [
+      0.55,
+      0.45
+    ]
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "submission_id": "1039658",
+  "phase": 7,
+  "phase_name": "Phase 7: Prior Case Retrieval (PCR)",
+  "timestamp": "2026-11-07 12:45",
+  "portal_score": 0.1305,
+  "evaluation_metric": "Micro F1@7",
+  "status": "Superseded",
+  "approach": "Bi-Encoder Dense Retriever trained with BM25 Hard Negatives",
+  "producing_notebook": "notebooks/phase_07_prior_case_retrieval/historical_experiments/CS781_Phase7_PCR_Appendix_Audit_and_Analysis.ipynb",
+  "hyperparameters": {
+    "backbone": "legal-roberta-base",
+    "loss": "MultipleNegativesRankingLoss",
+    "hard_negatives": 5
+  }
+}

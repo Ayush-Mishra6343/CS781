@@ -1,0 +1,5 @@
+{
+  "backbone": "roberta-base",
+  "beam_size": 4,
+  "length_penalty": 0.8
+}

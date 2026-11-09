@@ -1,0 +1,17 @@
+{
+  "submission_id": "976720",
+  "phase": 2,
+  "phase_name": "Phase 2: Legal Named Entity Recognition (L-NER)",
+  "timestamp": "2026-10-10 23:50",
+  "portal_score": 0.3092,
+  "evaluation_metric": "Strict Micro F1",
+  "status": "Superseded",
+  "approach": "Legal-RoBERTa 5-fold cross-validation ensemble with soft probability voting",
+  "producing_notebook": "notebooks/phase_02_ner/historical_experiments/Legal_NER_Phase2_V1_0p323_Rescue.ipynb",
+  "hyperparameters": {
+    "backbone": "roberta-base",
+    "folds": 5,
+    "lr": 3e-05,
+    "ensemble_method": "soft_voting"
+  }
+}

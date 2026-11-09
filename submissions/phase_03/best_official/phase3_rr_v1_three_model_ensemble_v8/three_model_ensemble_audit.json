@@ -1,0 +1,36 @@
+{
+  "domains": {
+    "CL": {
+      "documents": 5,
+      "sentences": 1339,
+      "unanimous": 844,
+      "majority_decisions": 469,
+      "all_different_ties_context_wins": 26,
+      "changed_from_context": 41,
+      "pairwise_disagreements": {
+        "context_candidate": 262,
+        "context_sequence": 300,
+        "candidate_sequence": 454
+      }
+    },
+    "IT": {
+      "documents": 5,
+      "sentences": 858,
+      "unanimous": 581,
+      "majority_decisions": 227,
+      "all_different_ties_context_wins": 50,
+      "changed_from_context": 76,
+      "pairwise_disagreements": {
+        "context_candidate": 192,
+        "context_sequence": 211,
+        "candidate_sequence": 201
+      }
+    }
+  },
+  "models": {
+    "context": "Context BiLSTM incumbent; dev mean fixed-13 Macro-F1 0.3670882663; prior Codabench 0.4311",
+    "candidate": "Safe low-rate continuation; dev mean fixed-13 Macro-F1 0.4106809475; prior Codabench 0.4278",
+    "sequence": "Five-fold CV last_bilstm_ce; OOF mean fixed-13 Macro-F1 0.3695775854; prior Codabench 0.3941"
+  },
+  "tie_rule": "If all three labels differ, keep the context incumbent label (known 0.4311 submission)."
+}

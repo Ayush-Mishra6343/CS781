@@ -1,0 +1,18 @@
+{
+  "submission_id": "975538",
+  "phase": 2,
+  "phase_name": "Phase 2: Legal Named Entity Recognition (L-NER)",
+  "timestamp": "2026-10-10 21:05",
+  "portal_score": 0.3131,
+  "evaluation_metric": "Strict Micro F1",
+  "status": "Superseded",
+  "approach": "RoBERTa-Legal with Linear-Chain Conditional Random Field (CRF) layer",
+  "producing_notebook": "notebooks/phase_02_ner/historical_experiments/Legal_NER_Phase2_V1_0p323_Rescue.ipynb",
+  "hyperparameters": {
+    "backbone": "roberta-base",
+    "crf": true,
+    "lr_backbone": 2e-05,
+    "lr_crf": 0.001,
+    "batch_size": 16
+  }
+}

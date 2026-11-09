@@ -1,0 +1,6 @@
+{
+  "backbone": "roberta-base",
+  "folds": 5,
+  "lr": 3e-05,
+  "ensemble_method": "soft_voting"
+}

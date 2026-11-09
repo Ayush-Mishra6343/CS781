@@ -1,0 +1,10 @@
+{
+  "chunk_size": 256,
+  "num_chunks": 16,
+  "hidden_dim": 768,
+  "global_layers": 4,
+  "adapter": "LoRMA-Plus",
+  "activation": "SwiGLU",
+  "lr": 0.00015,
+  "ensemble_method": "rank_super_ensemble"
+}

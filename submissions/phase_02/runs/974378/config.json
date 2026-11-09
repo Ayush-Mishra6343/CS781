@@ -1,0 +1,6 @@
+{
+  "backbone": "roberta-base",
+  "lr": 3e-05,
+  "batch_size": 16,
+  "epochs": 2
+}

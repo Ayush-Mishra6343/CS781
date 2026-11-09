@@ -1,0 +1,31 @@
+{
+  "phase": 3,
+  "submission_id": 992721,
+  "filename": "v1_ensemble.zip",
+  "date": "2026-10-16 15:39",
+  "score": 0.4337,
+  "metric": "Macro F1 (Official Codabench Test)",
+  "selected": true,
+  "dev_score": 0.4107,
+  "ensemble_components": [
+    {
+      "model": "Legal-RoBERTa + LoRA (r=16, alpha=32)",
+      "weight": 0.45
+    },
+    {
+      "model": "InLegalBERT + LoRMA (Low-Rank Moving Average)",
+      "weight": 0.35
+    },
+    {
+      "model": "InLegalBERT + BitFit (Bias-Only Tuning)",
+      "weight": 0.2
+    }
+  ],
+  "training": {
+    "loss": "Asymmetric Focal Loss (gamma_neg=4, gamma_pos=1)",
+    "optimizer": "AdamW",
+    "lr": 0.0002,
+    "batch_size": 32,
+    "epochs": 5
+  }
+}

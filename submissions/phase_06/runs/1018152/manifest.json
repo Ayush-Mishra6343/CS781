@@ -1,0 +1,17 @@
+{
+  "submission_id": "1018152",
+  "phase": 6,
+  "phase_name": "Phase 6: Legal Judgment Summarization",
+  "timestamp": "2026-11-01 22:05",
+  "portal_score": 0.759,
+  "evaluation_metric": "Composite BERTScore / ROUGE-L F1",
+  "status": "Superseded",
+  "approach": "DeBERTa-v3 sequence-to-sequence summarizer baseline",
+  "producing_notebook": "notebooks/phase_06_summarization/historical_experiments/CS781_Phase6_Summarization_Deep16_KD_MBR.ipynb",
+  "hyperparameters": {
+    "backbone": "microsoft/deberta-v3-base",
+    "max_input_len": 1024,
+    "max_summary_len": 256,
+    "lr": 3e-05
+  }
+}

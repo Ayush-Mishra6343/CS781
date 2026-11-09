@@ -1,0 +1,5 @@
+{
+  "backbone": "law-ai/InLegalBERT",
+  "beam_size": 4,
+  "lr": 3e-05
+}

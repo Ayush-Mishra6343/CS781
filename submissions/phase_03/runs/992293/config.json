@@ -1,0 +1,7 @@
+{
+  "backbone": "legal-roberta-base",
+  "lora_r": 8,
+  "gamma_neg": 4.0,
+  "gamma_pos": 1.0,
+  "lr": 0.0002
+}

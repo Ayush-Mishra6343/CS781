@@ -1,0 +1,7 @@
+{
+  "chunk_size": 256,
+  "hidden_dim": 768,
+  "loss": "FocalLoss",
+  "gamma": 2.0,
+  "lr": 0.0001
+}

@@ -1,0 +1,18 @@
+{
+  "submission_id": "988322",
+  "phase": 3,
+  "phase_name": "Phase 3: Rhetorical Role (RR) Classification & PEFT Suite",
+  "timestamp": "2026-10-14 20:05",
+  "portal_score": 0.4278,
+  "evaluation_metric": "Macro F1",
+  "status": "Superseded",
+  "approach": "Hierarchical Sentence BiLSTM on top of frozen Legal-RoBERTa sentence embeddings",
+  "producing_notebook": "notebooks/phase_03_rhetorical_roles/historical_experiments/Phase3_RR_V1_Balanced_Context_v3_Codabench.ipynb",
+  "hyperparameters": {
+    "backbone": "frozen legal-roberta",
+    "bilstm_hidden": 256,
+    "bilstm_layers": 2,
+    "lr": 0.001,
+    "dropout": 0.3
+  }
+}

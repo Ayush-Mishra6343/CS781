@@ -1,0 +1,6 @@
+{
+  "backbone": "legal-roberta-base",
+  "beam_size": 4,
+  "length_penalty": 1.0,
+  "no_repeat_ngram_size": 3
+}

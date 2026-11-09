@@ -1,0 +1,18 @@
+{
+  "submission_id": "1012531",
+  "phase": 5,
+  "phase_name": "Phase 5: Legal Statute Identification (LSI)",
+  "timestamp": "2026-10-27 22:15",
+  "portal_score": 0.3097,
+  "evaluation_metric": "Macro F1",
+  "status": "Superseded",
+  "approach": "Standalone SwiGLU-LoRMA Single-Model Baseline (V3 LSI)",
+  "producing_notebook": "notebooks/phase_05_statute_identification/historical_experiments/CS781_Phase5_LSI_V1_SwiGLU_LoRMA.ipynb",
+  "hyperparameters": {
+    "chunk_size": 256,
+    "adapter": "LoRMA",
+    "rank": 8,
+    "lr": 0.0002,
+    "step_zero": false
+  }
+}

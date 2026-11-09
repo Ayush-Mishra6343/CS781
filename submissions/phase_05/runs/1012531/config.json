@@ -1,0 +1,7 @@
+{
+  "chunk_size": 256,
+  "adapter": "LoRMA",
+  "rank": 8,
+  "lr": 0.0002,
+  "step_zero": false
+}

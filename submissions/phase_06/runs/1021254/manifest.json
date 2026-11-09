@@ -1,0 +1,16 @@
+{
+  "submission_id": "1021254",
+  "phase": 6,
+  "phase_name": "Phase 6: Legal Judgment Summarization",
+  "timestamp": "2026-11-02 19:10",
+  "portal_score": 0.8356,
+  "evaluation_metric": "Composite BERTScore / ROUGE-L F1",
+  "status": "Superseded",
+  "approach": "Omni-Ensemble MBR (V1-Deep16, LoRA, LoRMA, Bottleneck Adapters)",
+  "producing_notebook": "notebooks/phase_06_summarization/historical_experiments/PHASE6_CHAMPIONSHIP_ANALYSIS.ipynb",
+  "hyperparameters": {
+    "ensemble_size": 4,
+    "mbr_candidates": 16,
+    "mbr_metric": "bertscore"
+  }
+}

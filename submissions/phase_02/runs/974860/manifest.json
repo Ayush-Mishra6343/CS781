@@ -1,0 +1,19 @@
+{
+  "submission_id": "974860",
+  "phase": 2,
+  "phase_name": "Phase 2: Legal Named Entity Recognition (L-NER)",
+  "timestamp": "2026-10-10 18:45",
+  "portal_score": 0.32,
+  "evaluation_metric": "Strict Micro F1",
+  "status": "Superseded",
+  "approach": "RoBERTa-Legal with character boundary alignment at higher threshold (0.45)",
+  "producing_notebook": "notebooks/phase_02_ner/CS781_Phase2_LNER_CharacterBoundary_Calibrated.ipynb",
+  "hyperparameters": {
+    "backbone": "roberta-base",
+    "lr": 3e-05,
+    "batch_size": 16,
+    "epochs": 6,
+    "threshold": 0.45,
+    "boundary_calibrated": true
+  }
+}

@@ -1,0 +1,5 @@
+{
+  "backbone": "legal-roberta-base",
+  "loss": "MultipleNegativesRankingLoss",
+  "hard_negatives": 5
+}

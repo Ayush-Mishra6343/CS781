@@ -1,0 +1,16 @@
+{
+  "submission_id": "1018076",
+  "phase": 6,
+  "phase_name": "Phase 6: Legal Judgment Summarization",
+  "timestamp": "2026-11-01 12:40",
+  "portal_score": 0.8316,
+  "evaluation_metric": "Composite BERTScore / ROUGE-L F1",
+  "status": "Superseded",
+  "approach": "RoBERTa-base sequence-to-sequence summarizer with beam search",
+  "producing_notebook": "notebooks/phase_06_summarization/historical_experiments/CS781_Phase6_Summarization_Deep16_KD_MBR.ipynb",
+  "hyperparameters": {
+    "backbone": "roberta-base",
+    "beam_size": 4,
+    "length_penalty": 0.8
+  }
+}

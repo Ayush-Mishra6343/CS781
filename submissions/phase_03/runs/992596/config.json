@@ -1,0 +1,9 @@
+{
+  "backbone": "legal-roberta-base",
+  "lora_r": 8,
+  "lorma_r": 8,
+  "weights": [
+    0.55,
+    0.45
+  ]
+}

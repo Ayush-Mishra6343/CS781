@@ -13,12 +13,27 @@ Architecture: HybridLegalLM (94,762,752 Parameters)
 - KV Cache supported for fast autoregressive generation
 """
 import math
+from dataclasses import dataclass, field
+from typing import List, Optional
 import torch
 import torch.nn as nn
 import torch.nn.functional as F
 
 GLOBAL_ATTENTION_LAYERS = [0, 4, 8, 11]
 LOCAL_ATTN_WINDOW = 256
+
+@dataclass
+class ModelConfig:
+    vocab_size: int = 16000
+    n_embd: int = 768
+    n_layer: int = 12
+    n_head: int = 12
+    n_kv_head: int = 4
+    max_seq_len: int = 1024
+    ffn_multiplier: int = 4
+    dropout: float = 0.0
+    global_layers: List[int] = field(default_factory=lambda: [0, 4, 8, 11])
+    local_window: int = 256
 
 class RMSNorm(nn.Module):
     def __init__(self, dim, eps=1e-6):

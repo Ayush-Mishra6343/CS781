@@ -1,0 +1,7 @@
+{
+  "first_stage": "BM25 (k1=1.5, b=0.75, top_k=50)",
+  "second_stage": "Cross-Encoder (Legal-RoBERTa)",
+  "rrf_k": 60,
+  "score_normalization": "min_max",
+  "cut_off": 7
+}

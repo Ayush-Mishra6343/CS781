@@ -1,0 +1,6 @@
+{
+  "backbone": "bert-base-uncased",
+  "lr": 5e-05,
+  "batch_size": 32,
+  "epochs": 3
+}

@@ -1,0 +1,9 @@
+{
+  "num_sections": 100,
+  "chunk_size": 256,
+  "hidden_dim": 768,
+  "adapter": "LoRMA",
+  "step_zero_identity": true,
+  "loss": "AsymmetricMultilabel",
+  "threshold_tuning": true
+}

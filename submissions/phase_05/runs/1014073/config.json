@@ -1,0 +1,6 @@
+{
+  "backbone": "legal-bert",
+  "pos_weight": "dynamic",
+  "lr": 3e-05,
+  "epochs": 5
+}

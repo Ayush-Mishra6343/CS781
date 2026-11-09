@@ -1,0 +1,21 @@
+{
+  "submission_id": "1026947",
+  "phase": 6,
+  "phase_name": "Phase 6: Legal Judgment Summarization",
+  "timestamp": "2026-11-03 11:45",
+  "portal_score": 0.8362,
+  "evaluation_metric": "Composite BERTScore / ROUGE-L F1",
+  "status": "Superseded",
+  "approach": "TIES-Merged Champion Model with MBR Consensus (sample size 16)",
+  "producing_notebook": "notebooks/phase_06_summarization/historical_experiments/PHASE6_CHAMPIONSHIP_ANALYSIS.ipynb",
+  "hyperparameters": {
+    "merge_method": "TIES",
+    "models_merged": [
+      "Deep16-KD",
+      "LoRA-Wide",
+      "LoRMA-V4"
+    ],
+    "density": 0.2,
+    "mbr_candidates": 16
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "backbone": "roberta-base",
+  "peft_type": "LoRMA",
+  "rank": 8,
+  "lr": 0.0001,
+  "trainable_params_pct": 1.2
+}

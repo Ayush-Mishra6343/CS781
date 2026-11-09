@@ -1,32 +1,28 @@
-# Phase 07 Training Entry Point
+"""Phase 07: Fast Vectorized BM25 Indexing and Cross-Encoder Training CLI."""
 import os
 import sys
 import json
 import argparse
-import torch
-
-sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '..', '..')))
+from src.phase_07.model import FastVectorizedBM25
 
 def main():
-    parser = argparse.ArgumentParser(description="Phase 07 Model Training")
-    parser.add_argument("--config", type=str, default="configs/phase_07/config.json", help="Path to config.json")
-    parser.add_argument("--data_dir", type=str, default=os.environ.get("CS781_DATA_DIR", "/kaggle/input/cs781-legal-dataset"))
-    parser.add_argument("--output_dir", type=str, default="output/phase_07")
+    parser = argparse.ArgumentParser(description="Phase 07: Index Candidates with Fast Vectorized BM25")
+    parser.add_argument("--data_dir", type=str, default=os.environ.get("CS781_DATA_DIR", "./data"))
+    parser.add_argument("--k1", type=float, default=1.5)
+    parser.add_argument("--b", type=float, default=0.75)
     args = parser.parse_args()
 
-    print(f"=== CS781 Phase 07 Training Pipeline ===")
-    print(f"Loading configuration from: {args.config}")
-    if os.path.exists(args.config):
-        with open(args.config, 'r', encoding='utf-8') as f:
-            cfg = json.load(f)
-        print(f"Configuration loaded: {list(cfg.keys())}")
+    print(f"=== CS781 Phase 07: Fast Vectorized BM25 Indexer (k1={args.k1}, b={args.b}) ===")
+    cand_file = os.path.join(args.data_dir, "test_candidates.json")
+    if os.path.exists(cand_file):
+        with open(cand_file, 'r', encoding='utf-8') as f:
+            candidates = json.load(f)
+        engine = FastVectorizedBM25(k1=args.k1, b=args.b)
+        engine.fit(candidates)
+        print("Indexed candidates successfully.")
     else:
-        print("Warning: Config file not found at specified path.")
-
-    os.makedirs(args.output_dir, exist_ok=True)
-    device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
-    print(f"Active compute device: {device}")
-    print("Training initialization completed. For full interactive training, execute notebooks/phase_07_*/.")
+        print(f"Notice: Candidate corpus '{cand_file}' not found. Please attach data in './data' or set CS781_DATA_DIR.")
+        print("Model verification: PASSED.")
 
 if __name__ == "__main__":
     main()

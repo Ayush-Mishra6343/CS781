@@ -1,0 +1,21 @@
+{
+  "submission_id": "1009439",
+  "phase": 4,
+  "phase_name": "Phase 4: Court Judgment Prediction and Explanation (CJPE)",
+  "timestamp": "2026-10-26 18:53",
+  "portal_score": 0.6886,
+  "evaluation_metric": "Macro F1",
+  "status": "Selected (Winning)",
+  "approach": "Hierarchical Local-Global SwiGLU-LoRMA Document Classifier (Rank Super-Ensemble)",
+  "producing_notebook": "notebooks/phase_04_judgment_prediction/CS781_Phase4_CJPE_SwiGLU_LoRMA.ipynb",
+  "hyperparameters": {
+    "chunk_size": 256,
+    "num_chunks": 16,
+    "hidden_dim": 768,
+    "global_layers": 4,
+    "adapter": "LoRMA-Plus",
+    "activation": "SwiGLU",
+    "lr": 0.00015,
+    "ensemble_method": "rank_super_ensemble"
+  }
+}

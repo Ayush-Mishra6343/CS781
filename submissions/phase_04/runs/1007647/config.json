@@ -1,0 +1,7 @@
+{
+  "virtual_tokens": 20,
+  "adapter": "LoRMA",
+  "rank": 8,
+  "loss": "Asymmetric",
+  "lr": 0.0003
+}

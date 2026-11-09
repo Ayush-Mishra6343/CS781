@@ -1,0 +1,6 @@
+{
+  "backbone": "legal-roberta-base",
+  "pooling": "mean",
+  "similarity": "cosine",
+  "top_k": 7
+}

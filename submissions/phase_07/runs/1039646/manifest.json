@@ -1,0 +1,19 @@
+{
+  "submission_id": "1039646",
+  "phase": 7,
+  "phase_name": "Phase 7: Prior Case Retrieval (PCR)",
+  "timestamp": "2026-11-07 09:15",
+  "portal_score": 0.1742,
+  "evaluation_metric": "Micro F1@7",
+  "status": "Superseded",
+  "approach": "TF-IDF N-Gram Retrieval Baseline with Cosine Similarity",
+  "producing_notebook": "notebooks/phase_07_prior_case_retrieval/historical_experiments/CS781_Phase7_PCR_Appendix_Audit_and_Analysis.ipynb",
+  "hyperparameters": {
+    "ngram_range": [
+      1,
+      2
+    ],
+    "max_features": 40000,
+    "norm": "l2"
+  }
+}

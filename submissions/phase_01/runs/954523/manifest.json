@@ -1,0 +1,21 @@
+{
+  "submission_id": "954523",
+  "phase": 1,
+  "phase_name": "Phase 1: Legal Language Model Pre-Training",
+  "timestamp": "2026-10-02 21:10",
+  "portal_score": 0.8305,
+  "evaluation_metric": "Token Prediction Accuracy",
+  "status": "Superseded",
+  "approach": "RoFormer-style Rotary Position Embedding (RoPE) Legal Decoder (12 layers, 768 hidden)",
+  "producing_notebook": "notebooks/phase_01_pretraining/historical_experiments/CS781_Phase1_Pretraining_V1_Decoder.ipynb",
+  "hyperparameters": {
+    "layers": 12,
+    "hidden_dim": 768,
+    "heads": 12,
+    "vocab_size": 16000,
+    "lr": 0.0003,
+    "rotary_dim": 64,
+    "batch_size": 32,
+    "max_seq_len": 1024
+  }
+}

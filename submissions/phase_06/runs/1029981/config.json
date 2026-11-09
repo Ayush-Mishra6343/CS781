@@ -1,0 +1,9 @@
+{
+  "student_layers": 16,
+  "hidden_dim": 512,
+  "teacher": "Legal-RoBERTa-Large",
+  "distill_temp": 2.0,
+  "alpha_distill": 0.5,
+  "mbr_candidates": 16,
+  "mbr_metric": "bertscore_f1"
+}

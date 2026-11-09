@@ -1,0 +1,7 @@
+{
+  "backbone": "roberta-base",
+  "crf": true,
+  "lr_backbone": 2e-05,
+  "lr_crf": 0.001,
+  "batch_size": 16
+}

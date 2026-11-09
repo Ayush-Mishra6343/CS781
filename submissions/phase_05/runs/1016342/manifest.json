@@ -1,0 +1,20 @@
+{
+  "submission_id": "1016342",
+  "phase": 5,
+  "phase_name": "Phase 5: Legal Statute Identification (LSI)",
+  "timestamp": "2026-10-28 20:53",
+  "portal_score": 0.37,
+  "evaluation_metric": "Macro F1",
+  "status": "Selected (Winning)",
+  "approach": "Multi-Label Hierarchical SwiGLU-LoRMA with Step-Zero Identity Verification & Hybrid LSI",
+  "producing_notebook": "notebooks/phase_05_statute_identification/CS781_Phase5_LSI_Hierarchical_LoRMA.ipynb",
+  "hyperparameters": {
+    "num_sections": 100,
+    "chunk_size": 256,
+    "hidden_dim": 768,
+    "adapter": "LoRMA",
+    "step_zero_identity": true,
+    "loss": "AsymmetricMultilabel",
+    "threshold_tuning": true
+  }
+}

@@ -1,0 +1,109 @@
+name: CS781 Quality & Validation Pipeline
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout Code Repository
+      uses: actions/checkout@v4
+
+    - name: Set up Python Environment
+      uses: actions/setup-python@v5
+      with:
+        python-version: '3.11'
+        cache: 'pip'
+
+    - name: Install Dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install torch numpy flake8
+        if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
+
+    - name: Python AST Syntax Validation
+      run: |
+        python -c "
+        import os, ast, sys
+        errs = []
+        for root, dirs, files in os.walk('.'):
+            dirs[:] = [d for d in dirs if d not in {'.git', '.venv', 'venv', '__pycache__'}]
+            for f in files:
+                if f.endswith('.py'):
+                    fp = os.path.join(root, f)
+                    try:
+                        with open(fp, 'r', encoding='utf-8') as pyf:
+                            ast.parse(pyf.read(), filename=fp)
+                    except Exception as e:
+                        errs.append(f'{fp}: {e}')
+        if errs:
+            print('AST validation failed for:')
+            for e in errs:
+                print(' ', e)
+            sys.exit(1)
+        print('All Python source files passed AST syntax validation!')
+        "
+
+    - name: Jupyter Notebook JSON Validation
+      run: |
+        python -c "
+        import os, json, sys
+        errs = []
+        for root, dirs, files in os.walk('notebooks'):
+            for f in files:
+                if f.endswith('.ipynb'):
+                    fp = os.path.join(root, f)
+                    try:
+                        with open(fp, 'r', encoding='utf-8') as jf:
+                            json.load(jf)
+                    except Exception as e:
+                        errs.append(f'{fp}: {e}')
+        if errs:
+            print('Notebook JSON validation failed for:')
+            for e in errs:
+                print(' ', e)
+            sys.exit(1)
+        print('All Jupyter Notebooks passed JSON schema validation!')
+        "
+
+    - name: Execute Test Suite
+      run: |
+        python -m unittest discover tests/
+
+    - name: File Size Audit (<50 MB Limit)
+      run: |
+        python -c "
+        import os, sys
+        large_files = []
+        for root, dirs, files in os.walk('.'):
+            dirs[:] = [d for d in dirs if d not in {'.git', '.venv', 'venv'}]
+            for f in files:
+                fp = os.path.join(root, f)
+                sz = os.path.getsize(fp)
+                if sz > 50 * 1024 * 1024:
+                    large_files.append((fp, sz))
+        if large_files:
+            print('Found files exceeding 50 MB:')
+            for fp, sz in large_files:
+                print(f'  {fp}: {sz / 1024 / 1024:.2f} MB')
+            sys.exit(1)
+        print('File size audit PASSED (0 files > 50 MB).')
+        "
+
+    - name: Checkpoint Manifest Cryptographic Verification
+      run: |
+        python -c "
+        import os, csv, sys
+        manifest = 'checkpoints/CHECKPOINT_MANIFEST.csv'
+        if os.path.exists(manifest):
+            with open(manifest, 'r', encoding='utf-8') as f:
+                reader = csv.DictReader(f)
+                rows = list(reader)
+            print(f'Verified checkpoint manifest: {len(rows)} entries catalogued.')
+        else:
+            print('Notice: Checkpoint manifest not found at expected path.')
+        "

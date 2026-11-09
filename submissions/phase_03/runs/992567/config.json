@@ -1,0 +1,7 @@
+{
+  "backbone": "legal-roberta-base",
+  "lora_r": 8,
+  "lora_alpha": 16,
+  "lr": 0.0002,
+  "loss": "BCEWithLogitsLoss"
+}

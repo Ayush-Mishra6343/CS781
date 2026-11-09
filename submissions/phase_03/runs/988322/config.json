@@ -1,0 +1,7 @@
+{
+  "backbone": "frozen legal-roberta",
+  "bilstm_hidden": 256,
+  "bilstm_layers": 2,
+  "lr": 0.001,
+  "dropout": 0.3
+}

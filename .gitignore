@@ -13,11 +13,11 @@ env/
 .env/
 .venv/
 
-# Large model checkpoints (>100MB)
-checkpoints/*.pt
-checkpoints/*.bin
-checkpoints/*.pth
-checkpoints/*.safetensors
+# Large model checkpoints (>25MB)
+*.pt
+*.bin
+*.pth
+*.safetensors
 *.memmap
 train_tokens.bin
 val_tokens.bin
@@ -27,7 +27,8 @@ val_tokens.bin
 Thumbs.db
 ehthumbs.db
 
-# Temporary execution outputs
+# Temporary execution outputs & scratch
 /kaggle/working/*
 tmp/
 *.tmp
+scratch/

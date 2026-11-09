@@ -1,0 +1,20 @@
+{
+  "submission_id": "1029981",
+  "phase": 6,
+  "phase_name": "Phase 6: Legal Judgment Summarization",
+  "timestamp": "2026-11-03 16:29",
+  "portal_score": 0.8363,
+  "evaluation_metric": "Composite BERTScore / ROUGE-L F1",
+  "status": "Selected (Winning)",
+  "approach": "Deep-16 Knowledge Distillation Student (16 layers, 512 hidden) + Minimum Bayes Risk (MBR) Consensus Decoding",
+  "producing_notebook": "notebooks/phase_06_summarization/CS781_Phase6_Summarization_Deep16_KD_MBR.ipynb",
+  "hyperparameters": {
+    "student_layers": 16,
+    "hidden_dim": 512,
+    "teacher": "Legal-RoBERTa-Large",
+    "distill_temp": 2.0,
+    "alpha_distill": 0.5,
+    "mbr_candidates": 16,
+    "mbr_metric": "bertscore_f1"
+  }
+}

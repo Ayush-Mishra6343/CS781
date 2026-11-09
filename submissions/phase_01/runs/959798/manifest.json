@@ -1,0 +1,29 @@
+{
+  "submission_id": "959798",
+  "phase": 1,
+  "phase_name": "Phase 1: Legal Language Model Pre-Training",
+  "timestamp": "2026-10-04 13:24",
+  "portal_score": 0.8308,
+  "evaluation_metric": "Token Prediction Accuracy",
+  "status": "Selected (Winning)",
+  "approach": "HybridLegalLM (94.76M params, GQA 12/4, Sliding Window Local 256 + Global [0,4,8,11])",
+  "producing_notebook": "notebooks/phase_01_pretraining/CS781_Phase1_HybridLegalLM_Pretraining.ipynb",
+  "hyperparameters": {
+    "layers": 12,
+    "hidden_dim": 768,
+    "q_heads": 12,
+    "kv_heads": 4,
+    "vocab_size": 16000,
+    "lr": 0.0003,
+    "weight_decay": 0.1,
+    "batch_size": 32,
+    "max_seq_len": 1024,
+    "local_window": 256,
+    "global_layers": [
+      0,
+      4,
+      8,
+      11
+    ]
+  }
+}

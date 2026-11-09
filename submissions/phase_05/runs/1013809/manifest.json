@@ -1,0 +1,17 @@
+{
+  "submission_id": "1013809",
+  "phase": 5,
+  "phase_name": "Phase 5: Legal Statute Identification (LSI)",
+  "timestamp": "2026-10-28 09:40",
+  "portal_score": 0.2293,
+  "evaluation_metric": "Macro F1",
+  "status": "Superseded",
+  "approach": "DeBERTa-v3 multi-label baseline with max-sequence truncation",
+  "producing_notebook": "notebooks/phase_05_statute_identification/historical_experiments/V4_KAGGLE_HYBRID_LSI.ipynb",
+  "hyperparameters": {
+    "backbone": "deberta-v3-base",
+    "max_len": 512,
+    "lr": 2e-05,
+    "batch_size": 16
+  }
+}

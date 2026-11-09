@@ -1,0 +1,6 @@
+{
+  "backbone": "allenai/longformer-base-4096",
+  "max_len": 2048,
+  "lr": 3e-05,
+  "batch_size": 4
+}

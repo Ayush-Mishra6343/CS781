@@ -1,0 +1,6 @@
+{
+  "backbone": "deberta-v3-base",
+  "max_len": 512,
+  "lr": 2e-05,
+  "batch_size": 16
+}

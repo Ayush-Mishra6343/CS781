@@ -1,0 +1,6 @@
+{
+  "backbone": "law-ai/InLegalBERT",
+  "lr": 2e-05,
+  "batch_size": 16,
+  "epochs": 5
+}

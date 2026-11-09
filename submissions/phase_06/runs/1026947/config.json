@@ -1,0 +1,10 @@
+{
+  "merge_method": "TIES",
+  "models_merged": [
+    "Deep16-KD",
+    "LoRA-Wide",
+    "LoRMA-V4"
+  ],
+  "density": 0.2,
+  "mbr_candidates": 16
+}

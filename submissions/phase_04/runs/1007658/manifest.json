@@ -1,0 +1,17 @@
+{
+  "submission_id": "1007658",
+  "phase": 4,
+  "phase_name": "Phase 4: Court Judgment Prediction and Explanation (CJPE)",
+  "timestamp": "2026-10-25 19:15",
+  "portal_score": 0.5377,
+  "evaluation_metric": "Macro F1",
+  "status": "Superseded",
+  "approach": "Hierarchical Transformer with standard Cross-Entropy Loss",
+  "producing_notebook": "notebooks/phase_04_judgment_prediction/historical_experiments/CS781_Phase4_CJPE_V2_LoRMA_Plus_Stage2.ipynb",
+  "hyperparameters": {
+    "chunk_size": 256,
+    "hidden_dim": 768,
+    "loss": "CrossEntropy",
+    "lr": 0.0001
+  }
+}

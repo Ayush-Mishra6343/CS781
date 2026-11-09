@@ -1,0 +1,17 @@
+{
+  "submission_id": "1039654",
+  "phase": 7,
+  "phase_name": "Phase 7: Prior Case Retrieval (PCR)",
+  "timestamp": "2026-11-07 11:30",
+  "portal_score": 0.1955,
+  "evaluation_metric": "Micro F1@7",
+  "status": "Superseded",
+  "approach": "Bi-Encoder Dense Retriever (Legal-RoBERTa embeddings, Cosine Similarity)",
+  "producing_notebook": "notebooks/phase_07_prior_case_retrieval/historical_experiments/CS781_Phase7_PCR_Appendix_Audit_and_Analysis.ipynb",
+  "hyperparameters": {
+    "backbone": "legal-roberta-base",
+    "pooling": "mean",
+    "similarity": "cosine",
+    "top_k": 7
+  }
+}

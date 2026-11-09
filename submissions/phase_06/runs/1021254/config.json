@@ -1,0 +1,5 @@
+{
+  "ensemble_size": 4,
+  "mbr_candidates": 16,
+  "mbr_metric": "bertscore"
+}

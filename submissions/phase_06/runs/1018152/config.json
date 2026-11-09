@@ -1,0 +1,6 @@
+{
+  "backbone": "microsoft/deberta-v3-base",
+  "max_input_len": 1024,
+  "max_summary_len": 256,
+  "lr": 3e-05
+}

@@ -1,0 +1,17 @@
+{
+  "submission_id": "975506",
+  "phase": 2,
+  "phase_name": "Phase 2: Legal Named Entity Recognition (L-NER)",
+  "timestamp": "2026-10-10 19:30",
+  "portal_score": 0.1386,
+  "evaluation_metric": "Strict Micro F1",
+  "status": "Superseded",
+  "approach": "BERT-base-uncased baseline with default WordPiece tokenization",
+  "producing_notebook": "notebooks/phase_02_ner/historical_experiments/Legal_NER_Phase2_V1_0p323_Rescue.ipynb",
+  "hyperparameters": {
+    "backbone": "bert-base-uncased",
+    "lr": 5e-05,
+    "batch_size": 32,
+    "epochs": 3
+  }
+}

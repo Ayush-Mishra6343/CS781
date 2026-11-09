@@ -1,0 +1,10 @@
+{
+  "layers": 12,
+  "hidden_dim": 768,
+  "heads": 12,
+  "vocab_size": 16000,
+  "lr": 0.0003,
+  "weight_decay": 0.05,
+  "batch_size": 16,
+  "max_seq_len": 1024
+}

@@ -1,0 +1,7 @@
+{
+  "backbone": "legal-roberta-base",
+  "chunks": 8,
+  "chunk_len": 512,
+  "aggregation": "mean_pool",
+  "lr": 3e-05
+}

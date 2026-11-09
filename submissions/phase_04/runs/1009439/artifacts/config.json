@@ -1,0 +1,23 @@
+{
+  "phase": 4,
+  "submission_id": 1009439,
+  "filename": "swiglu_local_global_experiment_phas.zip",
+  "date": "2026-10-26 18:53",
+  "score": 0.6886,
+  "metric": "Macro F1 (Official Codabench Test)",
+  "selected": true,
+  "dev_score": 0.5838,
+  "architecture": {
+    "encoder": "SwiGLU Local-Global Context Attention Network",
+    "peft_adapter": "LoRMA+ Stage 2 (Low-Rank Moving Average)",
+    "activation": "SwiGLU (Swish Gated Linear Unit)",
+    "context_mechanism": "Hierarchical Window Pooling (512 local -> 4096 global)"
+  },
+  "training": {
+    "optimizer": "AdamW",
+    "lr": 0.00015,
+    "batch_size": 16,
+    "loss": "BCEWithLogitsLoss with Label Smoothing",
+    "epochs": 8
+  }
+}

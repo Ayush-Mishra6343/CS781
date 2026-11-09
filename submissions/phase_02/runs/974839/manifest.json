@@ -1,0 +1,19 @@
+{
+  "submission_id": "974839",
+  "phase": 2,
+  "phase_name": "Phase 2: Legal Named Entity Recognition (L-NER)",
+  "timestamp": "2026-10-10 16:12",
+  "portal_score": 0.3142,
+  "evaluation_metric": "Strict Micro F1",
+  "status": "Superseded",
+  "approach": "RoBERTa-Legal with standard token-level argmax boundary mapping",
+  "producing_notebook": "notebooks/phase_02_ner/historical_experiments/Legal_NER_Phase2_V1_0p323_Rescue.ipynb",
+  "hyperparameters": {
+    "backbone": "roberta-base",
+    "lr": 3e-05,
+    "batch_size": 16,
+    "epochs": 6,
+    "threshold": 0.5,
+    "boundary_calibrated": false
+  }
+}

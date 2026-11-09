@@ -1,0 +1,6 @@
+{
+  "backbone": "legal-roberta-base",
+  "lr": 2e-05,
+  "loss": "BCE",
+  "optimal_threshold": 0.38
+}

@@ -1,0 +1,13 @@
+{
+  "backbone": "legal-roberta-base",
+  "lora_r": 8,
+  "lora_alpha": 16,
+  "lorma_r": 8,
+  "bitfit": true,
+  "ensemble": "weighted_logits",
+  "weights": [
+    0.45,
+    0.4,
+    0.15
+  ]
+}

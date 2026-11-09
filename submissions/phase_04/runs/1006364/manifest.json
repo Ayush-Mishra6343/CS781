@@ -1,0 +1,18 @@
+{
+  "submission_id": "1006364",
+  "phase": 4,
+  "phase_name": "Phase 4: Court Judgment Prediction and Explanation (CJPE)",
+  "timestamp": "2026-10-24 18:22",
+  "portal_score": 0.552,
+  "evaluation_metric": "Macro F1",
+  "status": "Superseded",
+  "approach": "Chunked Legal-RoBERTa baseline with mean-pooling over 8 chunks",
+  "producing_notebook": "notebooks/phase_04_judgment_prediction/historical_experiments/CS781_Phase4_CJPE_V2_LoRMA_Plus_Stage2.ipynb",
+  "hyperparameters": {
+    "backbone": "legal-roberta-base",
+    "chunks": 8,
+    "chunk_len": 512,
+    "aggregation": "mean_pool",
+    "lr": 3e-05
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "phase": 2,
+  "submission_id": 974876,
+  "filename": "submission.zip",
+  "date": "2026-10-10 20:18",
+  "score": 0.3223,
+  "metric": "Macro F1 (Official Codabench Test)",
+  "selected": true,
+  "dev_score": 0.514,
+  "architecture": {
+    "encoder": "law-ai/InLegalBERT",
+    "sequence_layer": "Bidirectional LSTM",
+    "lstm_hidden": 256,
+    "num_classes": 14,
+    "boundary_calibration": "Exact Character Alignment"
+  },
+  "training": {
+    "optimizer": "AdamW",
+    "encoder_lr": 3e-05,
+    "head_lr": 0.001,
+    "epochs": 6,
+    "batch_size": 16,
+    "loss": "CrossEntropyLoss with Class Weights"
+  }
+}
