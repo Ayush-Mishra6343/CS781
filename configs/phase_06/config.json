@@ -1,0 +1,16 @@
+{
+  "phase": 6,
+  "submission_id": 1029981,
+  "filename": "submission_phase_6_FINAL.zip",
+  "date": "2026-11-03 16:29",
+  "score": 0.8363,
+  "metric": "BERTScore F1 (Official Codabench Test)",
+  "selected": true,
+  "val_score": 0.8335,
+  "architecture": {
+    "model": "Deep16 Student Model (16-layer Distilled Transformer)",
+    "knowledge_distillation": "Teacher-Student KL Divergence + Hidden State MSE",
+    "decoding_strategy": "Minimum Bayes Risk (MBR) 16-candidate Consensus",
+    "optimization": "DPO (Direct Preference Optimization) + TIES Merging"
+  }
+}

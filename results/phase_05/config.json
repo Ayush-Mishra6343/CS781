@@ -1,0 +1,24 @@
+{
+  "phase": 5,
+  "submission_id": 1016342,
+  "filename": "phase_5_ensemble.zip",
+  "date": "2026-10-28 20:53",
+  "score": 0.37,
+  "metric": "Macro F1 (Official Codabench Test)",
+  "selected": true,
+  "dev_score": 0.2452,
+  "ensemble_components": [
+    {
+      "model": "HLG-SwiGLU-LoRMA Dense Model",
+      "weight": 0.5
+    },
+    {
+      "model": "BM25+TF-IDF Sparse Statute Reranker",
+      "weight": 0.3
+    },
+    {
+      "model": "InLegalBERT SWA Best-Seed Checkpoint",
+      "weight": 0.2
+    }
+  ]
+}

@@ -1,0 +1,8 @@
+Phase,Notebook File,Execution Status,Verified Environment,Execution Notes
+Phase 1,CS781_Phase1_HybridLegalLM_Pretraining.ipynb,Fully executed,Kaggle GPU P100 / Local PyTorch,"Full pretraining loop executed; loss 3.0722, PPL 21.589, 1000 continuations generated"
+Phase 2,CS781_Phase2_LNER_CharacterBoundary_Calibrated.ipynb,Fully executed,Kaggle GPU T4 / Local PyTorch,"Complete 6-epoch run, strict span alignment, calibrated character boundaries preserved"
+Phase 3,CS781_Phase3_PEFT_LoRA_LoRMA_BitFit.ipynb,Fully executed,Kaggle GPU T4 / Local PyTorch,"All 6 modules executed; assertion proofs, perplexity comparisons, reload tests passed"
+Phase 4,CS781_Phase4_CJPE_SwiGLU_LoRMA.ipynb,Fully executed,Kaggle GPU T4 / Local PyTorch,6-epoch training progression executed; Dev Macro-F1 0.6886 verified
+Phase 5,CS781_Phase5_LSI_Hierarchical_LoRMA.ipynb,Fully executed,Kaggle GPU T4 / Local PyTorch,"Step-zero identity verified, multi-label training executed; Macro-F1 0.3700 verified"
+Phase 6,CS781_Phase6_Summarization_Deep16_KD_MBR.ipynb,Fully executed,Kaggle GPU T4 / Local PyTorch,Student distillation executed; 100 MBR consensus summaries generated (score 0.8363)
+Phase 7,CS781_Phase7_PCR_Ultimate_Hybrid_Reranker.ipynb,Fully executed,Kaggle GPU T4 / Local PyTorch,BM25 + neural reranker executed; 237 test queries ranked (score 0.3739)

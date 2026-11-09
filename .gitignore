@@ -1,0 +1,33 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+
+# Virtual environments
+venv/
+env/
+.env/
+.venv/
+
+# Large model checkpoints (>100MB)
+checkpoints/*.pt
+checkpoints/*.bin
+checkpoints/*.pth
+checkpoints/*.safetensors
+*.memmap
+train_tokens.bin
+val_tokens.bin
+
+# OS generated files
+.DS_Store
+Thumbs.db
+ehthumbs.db
+
+# Temporary execution outputs
+/kaggle/working/*
+tmp/
+*.tmp
