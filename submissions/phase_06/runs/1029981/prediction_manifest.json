@@ -1,0 +1,8 @@
+{
+  "submission_id": "1029981",
+  "phase": 6,
+  "artifact_file": "config.json",
+  "artifact_path": "submissions/phase_06/runs/1029981/artifacts/config.json",
+  "portal_score": 0.8363,
+  "metric": "Composite BERTScore / ROUGE-L F1"
+}

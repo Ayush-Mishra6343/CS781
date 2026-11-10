@@ -7,7 +7,7 @@
   "evaluation_metric": "Composite BERTScore / ROUGE-L F1",
   "status": "Superseded",
   "approach": "TIES-Merged Champion Model with MBR Consensus (sample size 16)",
-  "producing_notebook": "notebooks/phase_06_summarization/historical_experiments/PHASE6_CHAMPIONSHIP_ANALYSIS.ipynb",
+  "producing_notebook": "notebooks/phase_06_judgment_summarization/historical_experiments/PHASE6_CHAMPIONSHIP_ANALYSIS.ipynb",
   "hyperparameters": {
     "merge_method": "TIES",
     "models_merged": [

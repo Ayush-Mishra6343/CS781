@@ -1,0 +1,8 @@
+{
+  "submission_id": "974876",
+  "phase": 2,
+  "artifact_file": "config.json",
+  "artifact_path": "submissions/phase_02/runs/974876/artifacts/config.json",
+  "portal_score": 0.3223,
+  "metric": "Strict Micro F1"
+}

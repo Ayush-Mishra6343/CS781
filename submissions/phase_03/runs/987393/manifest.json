@@ -7,7 +7,7 @@
   "evaluation_metric": "Macro F1",
   "status": "Superseded",
   "approach": "Legal-RoBERTa fine-tuned with multi-label BCEWithLogitsLoss and threshold tuning",
-  "producing_notebook": "notebooks/phase_03_rhetorical_roles/historical_experiments/Phase3_RR_V1_Balanced_Context_v3_Codabench.ipynb",
+  "producing_notebook": "notebooks/phase_03_rhetorical_role_classification/historical_experiments/Phase3_RR_V1_Balanced_Context_v3_Codabench.ipynb",
   "hyperparameters": {
     "backbone": "legal-roberta-base",
     "lr": 2e-05,

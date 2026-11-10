@@ -7,7 +7,7 @@
   "evaluation_metric": "Strict Micro F1",
   "status": "Selected (Winning)",
   "approach": "RoBERTa-Legal Token Classifier + Calibrated Strict Character Boundary Alignment",
-  "producing_notebook": "notebooks/phase_02_ner/CS781_Phase2_LNER_CharacterBoundary_Calibrated.ipynb",
+  "producing_notebook": "notebooks/phase_02_legal_ner/CS781_Phase2_LNER_CharacterBoundary_Calibrated.ipynb",
   "hyperparameters": {
     "backbone": "roberta-base",
     "lr": 3e-05,

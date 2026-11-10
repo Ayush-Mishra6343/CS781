@@ -2,10 +2,10 @@
 
 [![Python 3.9+](https://img.shields.io/badge/Python-3.9%2B-blue.svg)](https://www.python.org/)
 [![PyTorch 2.0+](https://img.shields.io/badge/PyTorch-2.0%2B-ee4c2c.svg)](https://pytorch.org/)
-[![Kaggle Verified](https://img.shields.io/badge/Kaggle-GPU_Runnable-20beff.svg)](https://www.kaggle.com/)
+[![Kaggle Runnable](https://img.shields.io/badge/Kaggle-Verified_Execution-20beff.svg)](https://www.kaggle.com/)
 [![Codabench Benchmarked](https://img.shields.io/badge/Codabench-47_Submissions_Verified-4c1.svg)](https://www.codabench.org/)
-[![Tests Passing](https://img.shields.io/badge/Tests-4%2F4_Passing-brightgreen.svg)](tests/)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+[![Tests Passing](https://img.shields.io/badge/Tests-13%2F13_Passing-brightgreen.svg)](tests/)
+[![License: Academic Research](https://img.shields.io/badge/License-Academic_Research-lightgrey.svg)](#9-license--usage)
 
 **An End-to-End Legal AI Pipeline for Indian Jurisprudence: Domain Pre-Training, Entity Extraction, Parameter-Efficient Discourse Modeling, Hierarchical Decision Prediction, Penal Code Identification, Knowledge-Distilled Summarization, and Multi-Stage Prior Case Retrieval.**
 
@@ -46,7 +46,7 @@ The architecture operates as an interconnected computational pipeline where upst
 ```mermaid
 flowchart TD
     subgraph Data Layer
-        A[Indian Legal Judgment Corpus] --> B[Custom Indian Legal BPE 16k Tokenizer]
+        A[Indian Legal Judgment Corpus] --> B["Custom Byte-Level BPE Tokenizer\n(16k exploratory / 25k scaled)"]
     end
 
     subgraph Foundation Layer
@@ -68,6 +68,8 @@ flowchart TD
         F & G --> I["Phase 7: Prior Case Retrieval\nFast BM25 + Neural Cross-Encoder + RRF\nOfficial Micro-F1@7: 0.3739"]
     end
 ```
+
+> **Tokenizer Configuration Note:** Phase 1 initial vocabulary exploration evaluated a 16,000 subword vocabulary baseline; all scaled checkpoints, downstream domain adaptations (Phases 4–6), and inference pipelines standardize on the authentic 25,000 Byte-Level BPE vocabulary (`bpe_en_25k.json`).
 
 ---
 
@@ -192,3 +194,8 @@ In strict adherence to academic research ethics:
   howpublished = {https://github.com/Ayush-Mishra6343/CS781}
 }
 ```
+---
+
+## 9. License & Usage
+
+This project was developed and released as part of the CS781 Deep Learning for Natural Language Processing curriculum at the Indian Institute of Technology Kanpur. All models, source code, and artifacts are made available for academic research and educational evaluation purposes.

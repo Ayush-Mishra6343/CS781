@@ -1,0 +1,8 @@
+{
+  "submission_id": "1007658",
+  "phase": 4,
+  "artifact_file": "prediction.json",
+  "artifact_path": "submissions/phase_04/runs/1007658/artifacts/prediction.json",
+  "portal_score": 0.5377,
+  "metric": "Macro F1"
+}

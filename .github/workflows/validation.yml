@@ -99,11 +99,14 @@ jobs:
         python -c "
         import os, csv, sys
         manifest = 'checkpoints/CHECKPOINT_MANIFEST.csv'
-        if os.path.exists(manifest):
-            with open(manifest, 'r', encoding='utf-8') as f:
-                reader = csv.DictReader(f)
-                rows = list(reader)
-            print(f'Verified checkpoint manifest: {len(rows)} entries catalogued.')
-        else:
-            print('Notice: Checkpoint manifest not found at expected path.')
+        if not os.path.exists(manifest):
+            print('ERROR: checkpoints/CHECKPOINT_MANIFEST.csv is missing!')
+            sys.exit(1)
+        with open(manifest, 'r', encoding='utf-8') as f:
+            reader = csv.DictReader(f)
+            rows = list(reader)
+        if len(rows) == 0:
+            print('ERROR: checkpoints/CHECKPOINT_MANIFEST.csv is empty!')
+            sys.exit(1)
+        print(f'Verified checkpoint manifest: {len(rows)} entries catalogued.')
         "

@@ -7,7 +7,7 @@
   "evaluation_metric": "Strict Micro F1",
   "status": "Superseded",
   "approach": "InLegalBERT uncalibrated token classifier",
-  "producing_notebook": "notebooks/phase_02_ner/historical_experiments/Legal_NER_Phase2_V1_0p323_Rescue.ipynb",
+  "producing_notebook": "notebooks/phase_02_legal_ner/historical_experiments/Legal_NER_Phase2_V1_0p323_Rescue.ipynb",
   "hyperparameters": {
     "backbone": "law-ai/InLegalBERT",
     "lr": 2e-05,

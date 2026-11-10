@@ -1,0 +1,8 @@
+{
+  "submission_id": "992721",
+  "phase": 3,
+  "artifact_file": "config.json",
+  "artifact_path": "submissions/phase_03/runs/992721/artifacts/config.json",
+  "portal_score": 0.4337,
+  "metric": "Macro F1"
+}

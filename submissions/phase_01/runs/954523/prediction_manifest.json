@@ -1,0 +1,8 @@
+{
+  "submission_id": "954523",
+  "phase": 1,
+  "artifact_file": "prediction.json",
+  "artifact_path": "submissions/phase_01/runs/954523/artifacts/prediction.json",
+  "portal_score": 0.8305,
+  "metric": "Token Prediction Accuracy"
+}

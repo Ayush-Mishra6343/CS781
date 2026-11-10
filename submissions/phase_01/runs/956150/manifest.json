@@ -7,7 +7,7 @@
   "evaluation_metric": "Token Prediction Accuracy",
   "status": "Superseded",
   "approach": "Decoder LM with custom Indian Legal BPE 16k Tokenizer and Cosine Annealing",
-  "producing_notebook": "notebooks/phase_01_pretraining/historical_experiments/CS781_Phase1_A1_BPE_Tokenizer.ipynb",
+  "producing_notebook": "notebooks/phase_01_legal_language_model/historical_experiments/CS781_Phase1_A1_BPE_Tokenizer.ipynb",
   "hyperparameters": {
     "layers": 10,
     "hidden_dim": 640,

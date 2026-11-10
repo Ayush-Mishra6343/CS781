@@ -1,0 +1,8 @@
+{
+  "submission_id": "975680",
+  "phase": 2,
+  "artifact_file": "prediction.json",
+  "artifact_path": "submissions/phase_02/runs/975680/artifacts/prediction.json",
+  "portal_score": 0.2931,
+  "metric": "Strict Micro F1"
+}

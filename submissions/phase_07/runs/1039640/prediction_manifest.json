@@ -1,0 +1,8 @@
+{
+  "submission_id": "1039640",
+  "phase": 7,
+  "artifact_file": "config.json",
+  "artifact_path": "submissions/phase_07/runs/1039640/artifacts/config.json",
+  "portal_score": 0.3739,
+  "metric": "Micro F1@7"
+}

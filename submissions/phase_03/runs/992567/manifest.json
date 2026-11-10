@@ -7,7 +7,7 @@
   "evaluation_metric": "Macro F1",
   "status": "Superseded",
   "approach": "Standalone LoRA (r=8, alpha=16) with BCEWithLogitsLoss",
-  "producing_notebook": "notebooks/phase_03_rhetorical_roles/CS781_Phase3_PEFT_LoRA_LoRMA_BitFit.ipynb",
+  "producing_notebook": "notebooks/phase_03_rhetorical_role_classification/CS781_Phase3_PEFT_LoRA_LoRMA_BitFit.ipynb",
   "hyperparameters": {
     "backbone": "legal-roberta-base",
     "lora_r": 8,

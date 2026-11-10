@@ -7,7 +7,7 @@
   "evaluation_metric": "Strict Micro F1",
   "status": "Superseded",
   "approach": "Pilot RoBERTa token classifier without character span reconstruction",
-  "producing_notebook": "notebooks/phase_02_ner/historical_experiments/Legal_NER_Phase2_V1_0p323_Rescue.ipynb",
+  "producing_notebook": "notebooks/phase_02_legal_ner/historical_experiments/Legal_NER_Phase2_V1_0p323_Rescue.ipynb",
   "hyperparameters": {
     "backbone": "roberta-base",
     "lr": 3e-05,
