@@ -29,7 +29,8 @@ class TestSubmissionRegistry(unittest.TestCase):
         missing = []
         for row in reader:
             nb = row["notebook_reference"]
-            full_path = os.path.join(self.repo_root, nb)
+            parts = nb.replace("\\", "/").split("/")
+            full_path = os.path.join(self.repo_root, *parts)
             if not os.path.exists(full_path):
                 missing.append((row["submission_id"], nb))
 

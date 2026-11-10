@@ -7,7 +7,7 @@
   "evaluation_metric": "Composite BERTScore / ROUGE-L F1",
   "status": "Superseded",
   "approach": "Legal-RoBERTa generative summarizer with beam search (beam_size=4)",
-  "producing_notebook": "notebooks\\phase_06_judgment_summarization\\CS781_Phase6_Summarization_Deep16_KD_MBR.ipynb",
+  "producing_notebook": "notebooks/phase_06_judgment_summarization/CS781_Phase6_Summarization_Deep16_KD_MBR.ipynb",
   "hyperparameters": {
     "backbone": "legal-roberta-base",
     "beam_size": 4,

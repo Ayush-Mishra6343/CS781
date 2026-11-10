@@ -7,7 +7,7 @@
   "evaluation_metric": "Composite BERTScore / ROUGE-L F1",
   "status": "Superseded",
   "approach": "InLegalBERT sequence-to-sequence summarizer baseline",
-  "producing_notebook": "notebooks\\phase_06_judgment_summarization\\CS781_Phase6_Summarization_Deep16_KD_MBR.ipynb",
+  "producing_notebook": "notebooks/phase_06_judgment_summarization/CS781_Phase6_Summarization_Deep16_KD_MBR.ipynb",
   "hyperparameters": {
     "backbone": "law-ai/InLegalBERT",
     "beam_size": 4,
