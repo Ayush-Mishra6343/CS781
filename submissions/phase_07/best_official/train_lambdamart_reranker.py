@@ -9,10 +9,10 @@ import numpy as np
 import lightgbm as lgb
 from sklearn.model_selection import KFold
 
-BASE_DIR = r"D:\Phase7_PCR_050_PLUS"
-OLD_BASE = r"D:\Phase7_PCR"
-PROJ_ROOT = r"C:\Users\LENOVO\.gemini\antigravity\scratch\CS781_Capstone"
-DATA_DIR = os.path.join(PROJ_ROOT, "Phase_7_PCR", "data")
+BASE_DIR = os.environ.get("CS781_PHASE7_BASE", os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "..")))
+OLD_BASE = os.environ.get("CS781_OLD_BASE", BASE_DIR)
+PROJ_ROOT = os.environ.get("CS781_PROJ_ROOT", BASE_DIR)
+DATA_DIR = os.environ.get("CS781_DATA_DIR", os.path.join(PROJ_ROOT, "data", "phase_07"))
 
 sys.path.append(os.path.join(BASE_DIR, "src"))
 from e0_audit_and_reproduce import evaluate_retrieval

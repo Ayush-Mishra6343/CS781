@@ -1,4 +1,4 @@
-"""Phase 04: Court Judgment Prediction Macro F1 Metric Evaluation CLI."""
+"""Phase 04: Court Judgment Prediction Macro-F1 Metric Evaluation CLI."""
 
 import argparse
 import json
@@ -34,7 +34,7 @@ def main():
     if args.ground_truth_file and os.path.exists(args.ground_truth_file):
         with open(args.ground_truth_file, "r", encoding="utf-8") as f:
             gts = json.load(f)
-        # Handle dict or list format
+
         if isinstance(preds, list):
             p_dict = {str(x["id"]): int(x["pred"]) for x in preds}
         else:
@@ -48,14 +48,12 @@ def main():
         y_pred = [p_dict[k] for k in p_dict if k in g_dict]
         if y_true:
             score = compute_macro_f1(y_true, y_pred)
-            print(f"\nEvaluated Macro F1: {score:.4f} (across {len(y_true)} cases)")
+            print(f"\nEvaluated Macro-F1: {score:.4f} (across {len(y_true)} cases)")
             return
 
-    print("\n[NOTE] Blind competition test set. Ground truth is held privately on Codabench.")
-    print("Official Benchmark Results (Phase 4 CJPE Leaderboard):")
-    print("  Official Winning Score: 0.6886 Macro F1 (Local Development Macro F1: 0.8400)")
-    print("  Task Formulation:       Binary Outcome Classification (Dismissed vs Allowed) with Rationales")
-    print("  Architecture:           Hierarchical Local-Global SwiGLU-LoRMA Document Classifier")
+    print("\n[NOTE] Blind competition test set: Ground-truth outcome labels are held privately by the Codabench server.")
+    print("Local evaluation requires ground-truth labels (--ground_truth_file <path>).")
+    print("To inspect official competition submission scores, see: results/official_submissions.csv")
 
 
 if __name__ == "__main__":

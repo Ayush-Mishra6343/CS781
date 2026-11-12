@@ -30,14 +30,31 @@ def main():
         with open(pred_path, "r", encoding="utf-8") as f:
             data = json.load(f)
         print(f"Loaded submission record from {pred_path}")
+    else:
+        print(f"[ERROR] Prediction file not found at: {args.prediction_file}")
+        sys.exit(1)
 
-    # Official metrics from competition leaderboard
-    print("\nOfficial Benchmark Results (Phase 1 Legal LM Pretraining):")
-    print("  Official Portal Score:  0.8308")
-    print("  Best Validation Loss:   2.6418")
-    print("  Best Validation PPL:    14.038")
-    print("  Tokenizer Vocab:        25,000 Byte-Level BPE")
-    print("  Architecture:           12-layer Hybrid Causal Transformer (RoPE + GQA + SwiGLU)")
+    if args.ground_truth_file and os.path.exists(args.ground_truth_file):
+        with open(args.ground_truth_file, "r", encoding="utf-8") as f:
+            gts = json.load(f)
+        # Compute exact token accuracy if matching prompts/continuations
+        correct, total = 0, 0
+        for k in data:
+            if k in gts:
+                pred_tokens = str(data[k]).split()
+                gold_tokens = str(gts[k]).split()
+                for pt, gt in zip(pred_tokens, gold_tokens):
+                    if pt == gt:
+                        correct += 1
+                    total += 1
+        if total > 0:
+            acc = correct / total
+            print(f"\nEvaluated Token Accuracy: {acc:.4f} (over {total} tokens)")
+            return
+
+    print("\n[NOTE] Blind competition test set: Ground-truth labels are held privately by the Codabench server.")
+    print("Local evaluation requires ground-truth labels (--ground_truth_file <path>).")
+    print("To inspect official competition submission scores, see: results/official_submissions.csv")
 
 
 if __name__ == "__main__":

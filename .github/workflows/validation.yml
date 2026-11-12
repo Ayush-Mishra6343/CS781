@@ -2,9 +2,9 @@ name: CS781 Quality & Validation Pipeline
 
 on:
   push:
-    branches: [ main ]
+    branches: [ main, portfolio-cleanup ]
   pull_request:
-    branches: [ main ]
+    branches: [ main, portfolio-cleanup ]
 
 jobs:
   validate:
@@ -97,7 +97,7 @@ jobs:
     - name: Checkpoint Manifest Cryptographic Verification
       run: |
         python -c "
-        import os, csv, sys
+        import os, csv, sys, hashlib
         manifest = 'checkpoints/CHECKPOINT_MANIFEST.csv'
         if not os.path.exists(manifest):
             print('ERROR: checkpoints/CHECKPOINT_MANIFEST.csv is missing!')
@@ -108,5 +108,22 @@ jobs:
         if len(rows) == 0:
             print('ERROR: checkpoints/CHECKPOINT_MANIFEST.csv is empty!')
             sys.exit(1)
-        print(f'Verified checkpoint manifest: {len(rows)} entries catalogued.')
+        for r in rows:
+            sha = r.get('sha256_checksum', '')
+            if sha:
+                if len(sha) != 64 or not all(c in '0123456789abcdef' for c in sha.lower()):
+                    print(f'ERROR: Invalid checksum for {r[\"checkpoint_name\"]}: {sha}')
+                    sys.exit(1)
+            if r.get('storage_status') == 'Included in Repository':
+                loc = r.get('archive_location', '')
+                if not os.path.exists(loc):
+                    print(f'ERROR: Included file missing on disk: {loc}')
+                    sys.exit(1)
+                h = hashlib.sha256()
+                with open(loc, 'rb') as fb:
+                    h.update(fb.read())
+                if h.hexdigest().lower() != sha.lower():
+                    print(f'ERROR: Checksum mismatch for {loc}: computed={h.hexdigest()} vs manifest={sha}')
+                    sys.exit(1)
+        print(f'Verified checkpoint manifest: {len(rows)} entries validated, repo assets cryptographically confirmed.')
         "

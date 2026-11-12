@@ -1,4 +1,4 @@
-"""Phase 02: Legal NER Strict Micro F1 Metric Evaluation CLI."""
+"""Phase 02: Legal NER Strict Micro-F1 Metric Evaluation CLI."""
 
 import argparse
 import json
@@ -60,20 +60,18 @@ def main():
         p = total_tp / max(total_tp + total_fp, 1)
         r = total_tp / max(total_tp + total_fn, 1)
         micro_f1 = 2 * p * r / max(p + r, 1e-8)
-        print(f"\nStrict Micro F1 Evaluation:")
+        print(f"\nStrict Micro-F1 Evaluation:")
         print(f"  True Positives:  {total_tp}")
         print(f"  False Positives: {total_fp}")
         print(f"  False Negatives: {total_fn}")
         print(f"  Precision:       {p:.4f}")
         print(f"  Recall:          {r:.4f}")
-        print(f"  Micro F1:        {micro_f1:.4f}")
+        print(f"  Micro-F1:        {micro_f1:.4f}")
         return
 
-    print("\n[NOTE] Blind competition test set. Ground truth is held privately on Codabench.")
-    print("Official Benchmark Results (Phase 2 Legal NER Leaderboard):")
-    print("  Official Winning Score: 0.9927 (Strict Character-Boundary Micro F1)")
-    print("  Target Entities:         14 Legal Named Entity Classes")
-    print("  Calibration:             Subword offset projection with character snapping")
+    print("\n[NOTE] Blind competition test set: Ground-truth annotations are held privately by the Codabench server.")
+    print("Local evaluation requires ground-truth annotations (--ground_truth_file <path>).")
+    print("To inspect official competition submission scores, see: results/official_submissions.csv")
 
 
 if __name__ == "__main__":

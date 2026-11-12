@@ -42,7 +42,6 @@ def main():
         preds = json.load(f)
     print(f"Loaded {len(preds)} query predictions from {pred_path}")
 
-    # Check for qrels file
     qrels_path = args.qrels_file
     if qrels_path and not os.path.exists(qrels_path):
         cand_q = os.path.join(repo_root, qrels_path)
@@ -65,13 +64,9 @@ def main():
         print(f"  Micro-F1@{args.k}:      {metrics['micro_f1@k']:.4f}")
         return
 
-    # If ground-truth qrels are not provided (blind test set)
-    print("\n[NOTE] Blind test set: Ground truth qrels are held private on the Codabench server.")
-    print("Official Benchmark Results (Phase 7 Prior Case Retrieval Leaderboard):")
-    print("  Selected Model:      E6 Hybrid Multi-Stage Reranker (LambdaMART + Citation RRF)")
-    print("  Official Test Score: 0.3739 Micro-F1@7")
-    print("  Validation Score:    0.3745 Micro-F1@7")
-    print("  Mathematical Oracle: 0.6181 Micro-F1@7 (Ceiling given 826 prediction slots vs 973 gold pairs)")
+    print("\n[NOTE] Blind competition test set: Ground-truth qrels are held privately by the Codabench server.")
+    print("Local evaluation requires ground-truth qrels (--qrels_file <path>).")
+    print("To inspect official competition submission scores, see: results/official_submissions.csv")
 
 
 if __name__ == "__main__":

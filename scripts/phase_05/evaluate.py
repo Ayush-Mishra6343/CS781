@@ -1,4 +1,4 @@
-"""Phase 05: Legal Statute Identification Macro F1 Evaluation CLI."""
+"""Phase 05: Legal Statute Identification Macro-F1 Evaluation CLI."""
 
 import argparse
 import json
@@ -62,15 +62,12 @@ def main():
         with open(args.ground_truth_file, "r", encoding="utf-8") as f:
             gts = json.load(f)
         score = compute_multilabel_macro_f1(gts, preds)
-        print(f"\nEvaluated Multi-Label Macro F1 across 100 Penal Statutes: {score:.4f}")
+        print(f"\nEvaluated Multi-Label Macro-F1 across 100 Penal Statutes: {score:.4f}")
         return
 
-    print("\n[NOTE] Blind competition test set. Ground truth is held privately on Codabench.")
-    print("Official Benchmark Results (Phase 5 Legal Statute Identification Leaderboard):")
-    print("  Official Winning Score: 0.3700 Macro F1 (Hierarchical SwiGLU-LoRMA Run 3)")
-    print("  Initial Single Model:   0.3097 Macro F1 (Baseline configuration)")
-    print("  Statute Target Space:   100 Indian Penal Code (IPC) statutory sections")
-    print("  Evaluated Judgments:    13,019 test cases")
+    print("\n[NOTE] Blind competition test set: Ground-truth statute labels are held privately by the Codabench server.")
+    print("Local evaluation requires ground-truth labels (--ground_truth_file <path>).")
+    print("To inspect official competition submission scores, see: results/official_submissions.csv")
 
 
 if __name__ == "__main__":

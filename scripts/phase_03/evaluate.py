@@ -1,4 +1,4 @@
-"""Phase 03: Macro F1 Evaluation across 7 Rhetorical Roles CLI."""
+"""Phase 03: Macro-F1 Evaluation across 7 Rhetorical Roles CLI."""
 
 import argparse
 import json
@@ -38,14 +38,12 @@ def main():
         y_pred = [preds[k] for k in preds if k in gts]
         if y_true:
             score = compute_macro_f1(y_true, y_pred)
-            print(f"\nEvaluated Macro F1 across 7 Roles: {score:.4f}")
+            print(f"\nEvaluated Macro-F1 across 7 Roles: {score:.4f} (over {len(y_true)} sentences)")
             return
 
-    print("\n[NOTE] Blind competition test set. Ground truth is held privately on Codabench.")
-    print("Official Benchmark Results (Phase 3 Rhetorical Role Classification Leaderboard):")
-    print("  Official Winning Score: 0.9749 (Macro F1 across 7 Rhetorical Roles)")
-    print("  Role Classes:           Facts, Ruling by Lower Court, Argument, Statute, Precedent, Ratio of the decision, Ruling by Present Court")
-    print("  PEFT Approach:          Rank-weighted ensemble of LoRA + LoRMA+ + BitFit adapters")
+    print("\n[NOTE] Blind competition test set: Ground-truth role annotations are held privately by the Codabench server.")
+    print("Local evaluation requires ground-truth labels (--ground_truth_file <path>).")
+    print("To inspect official competition submission scores, see: results/official_submissions.csv")
 
 
 if __name__ == "__main__":

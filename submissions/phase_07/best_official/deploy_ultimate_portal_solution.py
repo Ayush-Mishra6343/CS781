@@ -10,10 +10,10 @@ import shutil
 from collections import Counter
 import numpy as np
 
-BASE_DIR = r"D:\Phase7_PCR_050_PLUS"
-PROJ_ROOT = r"C:\Users\LENOVO\.gemini\antigravity\scratch\CS781_Capstone"
-DATA_DIR = os.path.join(PROJ_ROOT, "Phase_7_PCR", "data")
-DOWNLOADS_DIR = r"C:\Users\LENOVO\Downloads\Phase7_Submissions"
+BASE_DIR = os.environ.get("CS781_PHASE7_BASE", os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "..")))
+PROJ_ROOT = os.environ.get("CS781_PROJ_ROOT", BASE_DIR)
+DATA_DIR = os.environ.get("CS781_DATA_DIR", os.path.join(PROJ_ROOT, "data", "phase_07"))
+DOWNLOADS_DIR = os.environ.get("CS781_DOWNLOADS_DIR", os.path.join(PROJ_ROOT, "submissions"))
 
 sys.path.append(os.path.join(BASE_DIR, "src"))
 from fast_vectorized_bm25 import FastVectorizedBM25

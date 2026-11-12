@@ -3,14 +3,14 @@ requires = ["setuptools>=61.0", "wheel"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "in-house-legal-intelligence"
-version = "1.0.0"
-description = "In-House Legal Intelligence System: Pretraining, NER, Rhetorical Roles, Judgment Prediction, Statute Identification, Summarization, and Prior Case Retrieval (IIT Kanpur CS781 Capstone)"
+name = "cs781-legal-nlp"
+version = "0.1.0"
+description = "Exploration of seven NLP tasks on Indian court judgments (CS781 Capstone Project, IIT Kanpur)"
 readme = "README.md"
 requires-python = ">=3.9"
 license = { text = "Academic Research / CS781 Capstone - IIT Kanpur" }
 authors = [
-    { name = "Ayush Mishra", email = "6343.ayushmishra@gmail.com" }
+    { name = "Ayush Mishra" }
 ]
 keywords = [
     "legal-nlp",

@@ -8,7 +8,7 @@ import argparse
 import json
 import os
 import sys
-from typing import Dict, List, Set, Tuple
+from typing import Dict, List, Tuple
 
 sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "..")))
 from src.phase_06.mbr_decoder import pairwise_f1_similarity
@@ -80,10 +80,10 @@ def main():
     args = parser.parse_args()
 
     print("=== Phase 06: Summarization Evaluation ===")
+    repo_root = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", ".."))
 
     pred_path = args.prediction_file
     if not os.path.exists(pred_path):
-        repo_root = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", ".."))
         candidate = os.path.join(repo_root, args.prediction_file)
         if os.path.exists(candidate):
             pred_path = candidate
@@ -114,21 +114,15 @@ def main():
         if r1_list:
             print("\nEvaluation Results against Ground Truth:")
             print(f"  Evaluated Samples: {len(r1_list)}")
-            print(f"  ROUGE-1: {sum(r1_list)/len(r1_list):.4f}")
-            print(f"  ROUGE-2: {sum(r2_list)/len(r2_list):.4f}")
-            print(f"  ROUGE-L: {sum(rl_list)/len(rl_list):.4f}")
+            print(f"  ROUGE-1:  {sum(r1_list)/len(r1_list):.4f}")
+            print(f"  ROUGE-2:  {sum(r2_list)/len(r2_list):.4f}")
+            print(f"  ROUGE-L:  {sum(rl_list)/len(rl_list):.4f}")
             print(f"  Token-F1: {sum(f1_list)/len(f1_list):.4f}")
             return
 
-    # If ground truth is not provided (Codabench blind test set)
-    print("\n[NOTE] Blind test set: Ground truth is held private by the Codabench competition server.")
-    print("Official Benchmark Results (Phase 6 Judgment Summarization Leaderboard):")
-    print("  Selected Model:      Deep-16 KD + MBR Consensus (V1_Deep16_KD_MBR2)")
-    print("  Official Score:      0.8363 (Composite BERTScore / ROUGE-L)")
-    print("  Validation ROUGE-1:  0.4281")
-    print("  Validation ROUGE-2:  0.2245")
-    print("  Validation ROUGE-L:  0.3712")
-    print("  Centroid BERTScore:  0.8363")
+    print("\n[NOTE] Blind competition test set: Ground-truth reference summaries are held privately by the Codabench server.")
+    print("Local evaluation requires reference summaries (--ground_truth_file <path>).")
+    print("To inspect official competition submission scores, see: results/official_submissions.csv")
 
 
 if __name__ == "__main__":
